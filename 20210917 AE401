@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 17 19:09:49 2021
+
+@author: edwardlu
+"""
+abcbc=5
+print(5)  #integer
+print(6.5)  #floating point, float
+print("hello！")  #string,str
+
+print("你好")
+print("請登入密碼")
+print("請登入")
+print("*****")
+print("登入成功")
+
+print("誰在使用Chrome?")
+print("人員１")
+print("ok")
