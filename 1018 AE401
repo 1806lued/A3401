@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct 16 10:58:45 2021
+
+@author: edwardlu
+"""
+names=[]
+scores=[]
+total=0
+avg=0
+
+n = int(input("到什麼時後？"))
+
+for i in range(n):
+    name = input('輸入分鐘')
+    names.append(name)
+    score = input("輸入事情")
+    score = int(score)
+    score.append(score)
+    
+for item in scores:
+    total = total+item
+print("大概......?",(total/n))
+
+highest=0
+for i in range(n):
+    if score[i] > highest:
+        highest = scores[i]
+        highestname = names[i]
+        
+print(highestname, '最多',highest)
+
+lowest = 100
+for i in range(n):
+    if scores[i] < lowest:
+        lowest = scores[i]
+        lowestname = names[i]
+print(lowestname, "最少",lowest)
