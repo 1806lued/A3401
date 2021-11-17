@@ -1,0 +1,27 @@
+@author: edwardlu
+"""
+
+datas = {'e8528':['可樂,30'],'e5828':['日曆,100'],'5285':['二手BMW(不分型號）,250萬/W'],'618':['預售屋（大約等１年到５年）,400萬／Ｗ']}
+while True:
+        ans=int(input("1.查詢貨好\n2.結束查詢系統\n請輸入"))
+        if ans==1:
+                num=input("請輸入貨號")
+                
+                if num not in datas:
+                    print('此貨不存在')
+                    new=input("請問是否新增此貨物(y or n)")
+                    if new=="y":
+                            name=input('請輸入品項名稱')
+                            
+                            price=int(input("請輸入價錢"))
+                            datas[num]=[name,price]
+                            
+                            print(f"貨號：{num}","品項：{}價格：{}元".format(datas[num],[0],datas[num][1]))
+                    else:
+                        pass
+        else:
+            print("品項：{}價格：{}元".format(datas[num],[0],datas[num][1]))
+        elif ans==2:
+                break
+        else:
+            print('輸入錯誤''')
