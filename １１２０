@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov 19 19:05:54 2021
+
+@author: edwardlu
+"""
+
+print('############################')
+print('######歡迎進入英高系統#######')
+print('############################')
+
+while True:
+    print('=>')
+    print('1. 建立辭彙')
+    print('2. 列出所有單字')
+    print('3. 英翻中')
+    print('4. 中翻英')
+    print('5. 測驗學習成果')
+    print('6. 離開系統')
+    
+    sel = input('請輸入欲執行選項: ')
+    if sel=='1':
+        print('1.建立辭彙')
+        word = input('請輸入單字')
+        if(word == '0'):
+            continue
+        else:
+            chinese = input("請輸入中文")
+            vocabularies[word] = chinese
+    elif sel=='2':
+        print('2. 列出所有單字')
+        for k in vocabularies.keys():
+            print(f"{k} 的意思是{vocabularies[k]}")
+    elif sel=='3':
+        print('3. 英翻中')
+        word = input("請輸入單字")
+        if word in vocabularies.keys():
+            print(f"{word} 的意思是{vocabularies[word]}")
+        else:
+            print("查無此單字")
+    elif sel=='4':
+        print('4. 中翻英')
+        chinese = input("請輸入中文")
+        for k,v in vocabularies.items():
+            if((v == chinese)):
+    elif sel=='5':
+        print('5. 測驗學習成果')
+    elif sel=='6':
+        print('6. 離開系統')
+        break
+    else:
+        print("輸入錯誤")
+        print("")
